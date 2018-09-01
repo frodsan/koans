@@ -4,7 +4,7 @@ import (
 	"testing"
 )
 
-func TestPickNumbers(t *testing.T) {
+func TestPickingNumbers(t *testing.T) {
 	var tests = []struct {
 		arr      []int32
 		expected int32
@@ -15,7 +15,7 @@ func TestPickNumbers(t *testing.T) {
 	}
 
 	for _, tt := range tests {
-		max := pickNumbers(tt.arr)
+		max := pickingNumbers(tt.arr)
 
 		if max != tt.expected {
 			t.Errorf("Expected %d, got %d", tt.expected, max)

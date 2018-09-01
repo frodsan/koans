@@ -16,7 +16,7 @@ The maximum length subarray has `5` elements.
 
 */
 
-func pickNumbers(a []int32) int32 {
+func pickingNumbers(a []int32) int32 {
 	var max int32
 
 	sort.Slice(a, func(i, j int) bool {
