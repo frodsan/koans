@@ -1,7 +1,6 @@
 package koans
 
 import (
-	"fmt"
 	"sort"
 )
 
@@ -55,8 +54,6 @@ func PickingNumbers2(a []int32) int32 {
 	for _, n := range a {
 		arr[n]++
 	}
-
-	fmt.Println(arr)
 
 	var m int32
 

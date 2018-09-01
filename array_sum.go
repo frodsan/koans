@@ -1,6 +1,6 @@
 package koans
 
-func arraySum(arr []int) int {
+func ArraySum(arr []int) int {
 	var sum int
 
 	for _, n := range arr {
