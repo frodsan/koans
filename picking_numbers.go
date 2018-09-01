@@ -17,7 +17,7 @@ The maximum length subarray has `5` elements.
 */
 
 func PickingNumbers(a []int32) int32 {
-	var max int32
+	var m int32
 
 	sort.Slice(a, func(i, j int) bool {
 		return a[i] < a[j]
@@ -32,12 +32,12 @@ func PickingNumbers(a []int32) int32 {
 			}
 		}
 
-		if max < ctr {
-			max = ctr
+		if m < ctr {
+			m = ctr
 		}
 	}
 
-	return max
+	return m
 }
 
 func abs(n int32) int32 {
