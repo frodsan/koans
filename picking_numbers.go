@@ -16,16 +16,18 @@ The maximum length subarray has `5` elements.
 
 */
 
-func pickNumbers(arr []int) int {
-	max := 0
+func pickNumbers(a []int32) int32 {
+	var max int32
 
-	sort.Ints(arr)
+	sort.Slice(a, func(i, j int) bool {
+		return a[i] < a[j]
+	})
 
-	for i := 0; i < len(arr)-1; i++ {
-		ctr := 1
+	for i := 0; i < len(a)-1; i++ {
+		var ctr int32 = 1
 
-		for j := i + 1; j < len(arr); j++ {
-			if abs(arr[i]-arr[j]) <= 1 {
+		for j := i + 1; j < len(a); j++ {
+			if abs(a[i]-a[j]) <= 1 {
 				ctr++
 			}
 		}
@@ -38,7 +40,7 @@ func pickNumbers(arr []int) int {
 	return max
 }
 
-func abs(n int) int {
+func abs(n int32) int32 {
 	if n < 0 {
 		return -n
 	} else {

@@ -6,12 +6,12 @@ import (
 
 func TestPickNumbers(t *testing.T) {
 	var tests = []struct {
-		arr      []int
-		expected int
+		arr      []int32
+		expected int32
 	}{
-		{[]int{1, 1, 2, 2, 4, 4, 5, 5, 5}, 5},
-		{[]int{4, 6, 5, 3, 3, 1}, 3},
-		{[]int{1, 2, 2, 3, 1, 2}, 5},
+		{[]int32{1, 1, 2, 2, 4, 4, 5, 5, 5}, 5},
+		{[]int32{4, 6, 5, 3, 3, 1}, 3},
+		{[]int32{1, 2, 2, 3, 1, 2}, 5},
 	}
 
 	for _, tt := range tests {
