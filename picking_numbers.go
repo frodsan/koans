@@ -43,9 +43,8 @@ func PickingNumbers(a []int32) int32 {
 func abs(n int32) int32 {
 	if n < 0 {
 		return -n
-	} else {
-		return n
 	}
+	return n
 }
 
 func PickingNumbers2(a []int32) int32 {
@@ -58,12 +57,15 @@ func PickingNumbers2(a []int32) int32 {
 	var m int32
 
 	for i := 0; i < len(arr)-1; i++ {
-		t := arr[i] + arr[i+1]
-
-		if t > m {
-			m = t
-		}
+		m = max(m, arr[i]+arr[i+1])
 	}
 
 	return m
+}
+
+func max(x, y int32) int32 {
+	if x > y {
+		return x
+	}
+	return y
 }
