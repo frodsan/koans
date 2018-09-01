@@ -1,6 +1,7 @@
 package koans
 
 import (
+	"fmt"
 	"sort"
 )
 
@@ -16,7 +17,7 @@ The maximum length subarray has `5` elements.
 
 */
 
-func pickingNumbers(a []int32) int32 {
+func PickingNumbers(a []int32) int32 {
 	var max int32
 
 	sort.Slice(a, func(i, j int) bool {
@@ -46,4 +47,26 @@ func abs(n int32) int32 {
 	} else {
 		return n
 	}
+}
+
+func PickingNumbers2(a []int32) int32 {
+	arr := [100]int32{}
+
+	for _, n := range a {
+		arr[n]++
+	}
+
+	fmt.Println(arr)
+
+	var m int32
+
+	for i := 0; i < len(arr)-1; i++ {
+		t := arr[i] + arr[i+1]
+
+		if t > m {
+			m = t
+		}
+	}
+
+	return m
 }
